@@ -11,7 +11,6 @@ body {
     margin-top: 130px;
 }
 
-
 /* Estilos para a tabela de comparação */
 .comparison-table {
     margin-top: -310px;
@@ -157,11 +156,21 @@ body {
 }
 
 .left-content .btn {
-    font-size: 24px;
+    background-color: #483D8B; /* Cor de fundo roxa */
+    color: white; /* Cor do texto branco */
+    text-decoration: none; /* Remover sublinhado do link */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    border-radius: 5px; /* Borda arredondada */
+    border: 2px solid #a084d9; /* Borda roxa com 2px de largura */
+    transition: background-color 0.3s, border 0.3s; /* Transições suaves de cor de fundo e borda */
 }
 
-/* Estilos para a seção .right-content */
-/* Estilos para o contêiner principal */
+.left-content .btn:hover {
+    background-color: #a084d9; /* Cor de fundo roxa mais clara no hover */
+    border: 2px solid #7b59b7; /* Borda roxa mais escura no hover */
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -308,13 +317,6 @@ body {
     margin-top: 10px;
 }
 
-/* Estilos para o hover das imagens coloridas */
-
-
-/* Estilos para desativar o hover apenas na div com ID "2" */
-
-
-
 .image-container {
     text-align: center;
     margin: 20px; /* Aumentei a margem para criar um "box" maior */
@@ -355,4 +357,22 @@ body {
 #2 .image-container:hover {
     background-color: #7b59b7;
     transform: none;
+}
+/* Estilos para o botão de rolar para o topo */
+.scroll-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    width: 40px; /* Largura da imagem do botão */
+    height: 40px; /* Altura da imagem do botão */
+    background-image: url(img/upload.png);
+    background-size: cover; /* Garante que a imagem cubra todo o botão */
+    border: none;
+    border-radius: 50%; /* Faz com que o botão seja um círculo */
+    cursor: pointer;
+}
+
+.scroll-to-top-btn.show {
+    display: block;
 }
